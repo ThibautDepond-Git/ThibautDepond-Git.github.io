@@ -5,6 +5,9 @@ html{
 body{
     margin: 0;
     padding: 0;
+    background-color: #aacca9;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -54,12 +57,6 @@ a:visited:hover{
     align-self: flex-end;
 }
 
-.arti p{
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-
 nav{
     display: flex;
     align-items: center;
@@ -67,4 +64,35 @@ nav{
 }
 nav li{
     display: inline-block;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    align-self: center;
+}
+
+article section{
+    align-self: center;
+    width: 50%;
+}
+
+.arti{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    padding: 1%;
+}
+
+.arti p{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.arti h5{
+    margin-bottom: 0;
+    margin-top: 0;
+    align-self: flex-end;
 }
