@@ -76,6 +76,7 @@ article{
 article section{
     align-self: center;
     width: 50%;
+    margin-right: 50px;
 }
 
 .arti{
@@ -84,7 +85,9 @@ article section{
     width: auto;
     height: auto;
     border: 1px solid black;
+    border-radius: 5px;
     padding: 1%;
+    margin-bottom: 10px;
 }
 
 .arti p{
