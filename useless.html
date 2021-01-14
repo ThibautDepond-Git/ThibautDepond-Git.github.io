@@ -27,7 +27,8 @@
         </br>
 
         <article>
-            <button onclick="hey1()"> - 1 - </button>
+            <button onclick="hey()"> - 1 - </button>
+            <button onclick="heyWithAsyncAwait()"> - 2 - </button>
         </article>
 
         <Script>
@@ -49,17 +50,17 @@
                });
             }
 
-            const hey1 = async () => {
-                await envoyerRequete('https://perdu.com').then((res) => {
-                    console.log(res)
-                }, (err) => { 
-                    console.log(err.message)
-                })
-                await traiterReponse().then(res => {
-                    console.log(res)
-                }).catch(err => {
-                    console.log("Error : ", err)
-                })
+            const hey = () => {
+                envoyerRequete('https://perdu.com')
+                    .then((res) => traiterReponse(res))
+                    .then((res) => console.log(res))
+                    .catch((err) => console.log(err))
+            }
+
+            const heyWithAsyncAwait = async () => {
+                const response = await envoyerRequete('Google');
+                const responseT = await traiterReponse(response);
+                console.log(responseT)
             }
 
         </Script>
