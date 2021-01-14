@@ -50,8 +50,18 @@
                });
             }
 
-            const envoyer = () => { envoyerRequete().then((res) => {console.log(res)}, (err) => { console.log(err.message)} ) }
-            const traiter = () => { traiterReponse().then(res => {console.log(res)}).catch(err => {console.log("Error : ", err)})}
+            const hey1 = async () => {
+                await envoyerRequete().then((res) => {
+                    console.log(res)
+                }, (err) => { 
+                    console.log(err.message)
+                })
+                await traiterReponse().then(res => {
+                    console.log(res)
+                }).catch(err => {
+                    console.log("Error : ", err)
+                })
+            }
 
         </Script>
     </body>
