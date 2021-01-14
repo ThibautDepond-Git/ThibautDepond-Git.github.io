@@ -34,19 +34,19 @@
         <Script>
             function envoyerRequete(location) {
                 return new Promise((resolve, reject) => {
-                    console.log(`making request to ${location}`);
+                    console.log(`making request to ${location}`)
                     if (location === "Google") {
-                        resolve("Google dit hello !");
+                        resolve("Google dit hello !")
                     } else {
-                        reject({ message: "On ne peut parler qu'à Google" });
+                        reject({ message: "On ne peut parler qu'à Google" })
                     }
                 });
             }
 
             function traiterReponse(response) {
                return new Promise((resolve, reject) => {
-                   console.log("Traitement de la réponse");
-                   resolve(`Réponse traitée... ${response}`);
+                   console.log("Traitement de la réponse")
+                   resolve(`Réponse traitée... ${response}`)
                });
             }
 
@@ -58,8 +58,8 @@
             }
 
             const heyWithAsyncAwait = async () => {
-                const response = await envoyerRequete('Google');
-                const responseT = await traiterReponse(response);
+                const response = await envoyerRequete('Google')
+                const responseT = await traiterReponse(response)
                 console.log(responseT)
             }
 
