@@ -27,8 +27,7 @@
         </br>
 
         <article>
-            <button onclick="envoyer('https://perdu.com')"> envoyer </button>
-            <button onclick="traiter()"> traiter </button>
+            <button onclick="hey1()"> - 1 - </button>
         </article>
 
         <Script>
@@ -51,7 +50,7 @@
             }
 
             const hey1 = async () => {
-                await envoyerRequete().then((res) => {
+                await envoyerRequete('https://perdu.com').then((res) => {
                     console.log(res)
                 }, (err) => { 
                     console.log(err.message)
