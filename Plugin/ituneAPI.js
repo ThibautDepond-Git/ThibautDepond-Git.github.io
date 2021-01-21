@@ -10,7 +10,7 @@ const songsList = document.querySelector('.results');
  * return JSON
  * @param {string} term
  */
-const fetchItunesSongs = async (term) => {
+export const fetchItunesSongs = async (term) => {
   try {
     const url = `${API}?term=${term}`;
     const response = await fetch(url);
@@ -28,7 +28,7 @@ const fetchItunesSongs = async (term) => {
  * Play the song
  * @param {object} event
  */
-const handleClickSong = (event) => {
+export const handleClickSong = (event) => {
   const target = event.target;
   console.log(target);
   if (target.tagName !== 'LI' && !target.getAttribute('data-preview')) {
@@ -42,7 +42,7 @@ const handleClickSong = (event) => {
  * From a song object returned by the API, create a <li> tag
  * @param {object} s
  */
-const createSongLI = (s) => {
+export const createSongLI = (s) => {
   const li = document.createElement('li');
   const h1 = document.createElement('h1');
   const span = document.createElement('span');
@@ -59,7 +59,7 @@ const createSongLI = (s) => {
 /**
  * Perform a search request + add the results to the DOM
  */
-const search = async () => {
+export const search = async () => {
   let searchValue = searchInput.value.trim();
   if (!searchValue) return;
   songsList.innerHTML = '';
@@ -93,5 +93,7 @@ searchBtn.addEventListener('click', search);
 songsList.addEventListener('click', handleClickSong);
 
 (function main() {
-  console.log('--- main ---');
+  console.log('--- hello ---');
 })();
+
+
