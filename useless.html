@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="asset/favicon.ico" />
         <link rel="stylesheet" href="CSS/myCSS.css">
+        <link href="https://fonts.googleapis.com/css?family=Public+Sans:400,700&display=swap" rel="stylesheet" />
         <title>&#60/ I am useless &#62</title>
     </head>
     <body>
@@ -18,7 +19,6 @@
                     <li><a href="https://www.linkedin.com/in/thibaut-depond-165b7bbb/" target="blank">&#60 Linkedin &#62</a></li>
                     <li><a href="#" target="blank">&#60 my resume &#62</a></li>
                     <li><a href="useless.html">&#60 useless &#62</a></li>
-                    <li><a href="https://perdu.com/">&#60 perdu ? &#62</a></li>
                 </ul>
                 <p class="hosted">hosted by github page</p>
             </nav>
@@ -32,6 +32,25 @@
                 <button onclick="hey()"> - 1 - </button>
                 <button onclick="heyWithAsyncAwait()"> - 2 - </button>
             </div>
+        </article>
+
+        <article>
+            <section class="app">
+                <h1>ITUNES API</h1>
+                <div class="search-container">
+                    <input type="text" placeholder="search" id="search" />
+                    <button type="button" class="btn">Search</button>
+                </div>
+                <div class="results"></div>
+                <p class="no-result">
+                    No results found<br />Try different keywords
+                </p>
+            </section>
+            <audio class="player" controls>
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+            <script src="./index.js"></script>
         </article>
 
         <Script>
